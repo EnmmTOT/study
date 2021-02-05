@@ -21,10 +21,6 @@ def index():
 	]
 	return render_template('index.html', title='Home', user=user, posts=posts)
 
-# @app.route('/login')
-# def login():
-# 	form = LoginForm()#表单实例化对象
-# 	return render_template('login.html', title='Sign In', form=form)
 @app.route('/login',methods=['GET','POST'])
 def login():
 	form = LoginForm()
